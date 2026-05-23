@@ -56,7 +56,7 @@ with st.sidebar:
 
     dashboard_url = st.text_input(
         'URL do dashboard',
-        value='http://localhost:8501',
+        value='https://projeto-stock-iscte.streamlit.app/',
         help='Link clicável no email para o destinatário aceder ao dashboard live',
     )
 

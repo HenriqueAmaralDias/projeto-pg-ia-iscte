@@ -252,7 +252,7 @@ def build_critical_alert_email(
     recipient,
     sender='alertas@stock-bi.local',
     n_top=10,
-    dashboard_url='http://localhost:8501',
+    dashboard_url='https://projeto-stock-iscte.streamlit.app/',
 ):
     """
     Constrói EmailMessage com alertas críticos.

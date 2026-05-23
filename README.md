@@ -1,5 +1,9 @@
 # Sistema Inteligente de Gestão de Cobertura de Stock e Planeamento de Produção
 
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://projeto-stock-iscte.streamlit.app/)
+
+**Demo live:** https://projeto-stock-iscte.streamlit.app/
+
 Aplicação Streamlit multi-página | Projeto Final | PG em IA | ISCTE
 Autor: Henrique Amaral Dias
 
