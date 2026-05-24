@@ -98,7 +98,13 @@ CUSTOM_CSS = """
     [data-testid="stSidebarNav"] ul li:first-child a span:last-of-type::after {
         content: 'App';
         font-size: 0.9rem !important;
-        color: inherit !important;
+        color: #1F2937 !important;
+        font-weight: 500 !important;
+    }
+    /* Quando na página App, o texto injectado fica em bordeaux + bold como os outros activos */
+    [data-testid="stSidebarNav"] ul li:first-child a[aria-current="page"] span:last-of-type::after {
+        color: #722F37 !important;
+        font-weight: 700 !important;
     }
     /* Inputs dentro da sidebar (selectbox, slider labels) */
     [data-testid="stSidebar"] input,
