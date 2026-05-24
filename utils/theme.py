@@ -58,10 +58,10 @@ CUSTOM_CSS = """
         font-weight: 700;
     }
 
-    /* Sidebar — light gray neutro (bom contraste com dark mode) */
+    /* Sidebar — bordeaux muito clarinho (liga à identidade CARMIM #722F37) */
     [data-testid="stSidebar"] {
-        background-color: #F3F4F6 !important;
-        border-right: 1px solid #E5E7EB;
+        background-color: #F5E8EA !important;
+        border-right: 1px solid #E8D5D8;
     }
     [data-testid="stSidebar"] *,
     [data-testid="stSidebar"] a,
@@ -81,11 +81,11 @@ CUSTOM_CSS = """
         font-weight: 500 !important;
     }
     [data-testid="stSidebarNav"] a:hover {
-        background-color: rgba(114, 47, 55, 0.1) !important;
+        background-color: rgba(114, 47, 55, 0.15) !important;
     }
     /* Página activa */
     [data-testid="stSidebarNav"] a[aria-current="page"] {
-        background-color: rgba(114, 47, 55, 0.15) !important;
+        background-color: rgba(114, 47, 55, 0.22) !important;
     }
     [data-testid="stSidebarNav"] a[aria-current="page"] span {
         color: #722F37 !important;
