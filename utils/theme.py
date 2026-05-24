@@ -91,6 +91,15 @@ CUSTOM_CSS = """
         color: #722F37 !important;
         font-weight: 700 !important;
     }
+    /* Renomear "app" → "App" (capitaliza label da home na nav multi-page) */
+    [data-testid="stSidebarNav"] ul li:first-child a span:last-of-type {
+        font-size: 0 !important;
+    }
+    [data-testid="stSidebarNav"] ul li:first-child a span:last-of-type::after {
+        content: 'App';
+        font-size: 0.9rem !important;
+        color: inherit !important;
+    }
     /* Inputs dentro da sidebar (selectbox, slider labels) */
     [data-testid="stSidebar"] input,
     [data-testid="stSidebar"] [data-baseweb="select"] {
