@@ -58,9 +58,10 @@ CUSTOM_CSS = """
         font-weight: 700;
     }
 
-    /* Sidebar — força texto escuro mesmo em dark mode (bg cream) */
+    /* Sidebar — light gray neutro (bom contraste com dark mode) */
     [data-testid="stSidebar"] {
-        background-color: #FAF4E1 !important;
+        background-color: #F3F4F6 !important;
+        border-right: 1px solid #E5E7EB;
     }
     [data-testid="stSidebar"] *,
     [data-testid="stSidebar"] a,
