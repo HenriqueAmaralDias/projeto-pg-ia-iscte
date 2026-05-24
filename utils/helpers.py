@@ -91,7 +91,8 @@ def render_footer():
     """Footer comum em todas as páginas."""
     st.markdown(
         '<div class="footer">'
-        'Projeto Final | PG em IA | ISCTE | Henrique Amaral Dias | '
+        'PG em Tecnologias e IA Aplicadas aos Negócios | ISCTE Executive Education | '
+        'Carlos Mota + Henrique Amaral Dias + Vítor Ribeiro | '
         'Sistema Inteligente de Gestão de Cobertura de Stock e Planeamento de Produção'
         '</div>',
         unsafe_allow_html=True

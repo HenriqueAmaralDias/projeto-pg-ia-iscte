@@ -39,6 +39,19 @@ CUSTOM_CSS = """
     [data-testid="stMetricLabel"] {
         font-weight: 600;
         color: #722F37;
+        white-space: normal;
+        overflow: visible;
+        text-overflow: clip;
+    }
+    [data-testid="stMetricLabel"] > div {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+    }
+    [data-testid="stMetricLabel"] p {
+        white-space: normal !important;
+        overflow-wrap: break-word !important;
+        word-break: normal !important;
     }
     [data-testid="stMetricValue"] {
         font-size: 1.6rem;

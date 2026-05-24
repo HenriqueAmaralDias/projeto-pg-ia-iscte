@@ -2,12 +2,13 @@
 Sistema Inteligente de Gestão de Cobertura de Stock e Planeamento de Produção
 Aplicação Streamlit multi-página.
 
-Projeto Final | PG em IA | ISCTE
-Henrique Amaral Dias
+PG em Tecnologias e IA Aplicadas aos Negócios | ISCTE Executive Education
+Carlos Mota + Henrique Amaral Dias + Vítor Ribeiro
 
 Execução:
     streamlit run app.py
 """
+from pathlib import Path
 import streamlit as st
 import pandas as pd
 from utils.data_loader import (
@@ -16,6 +17,8 @@ from utils.data_loader import (
 )
 from utils.theme import CUSTOM_CSS, COLOR_PRIMARY, COLOR_DANGER, COLOR_WARNING, COLOR_SUCCESS
 from utils.helpers import render_footer, header_with_refresh
+
+ASSETS = Path(__file__).parent / 'assets'
 
 # ============================================================
 # Page config
@@ -33,11 +36,32 @@ st.set_page_config(
 st.markdown(CUSTOM_CSS, unsafe_allow_html=True)
 
 # ============================================================
+# Banner do cliente CARMIM
+# ============================================================
+logo_path = ASSETS / 'carmim_logo.png'
+if logo_path.exists():
+    bcol1, bcol2 = st.columns([1, 3])
+    with bcol1:
+        st.image(str(logo_path), use_container_width=True)
+    with bcol2:
+        st.markdown(
+            '<div style="padding-top:1.2rem;">'
+            '<div style="font-size:0.85rem; color:#6B7280; text-transform:uppercase; letter-spacing:1px;">Caso de estudo</div>'
+            '<div style="font-size:1.4rem; font-weight:700; color:#722F37; margin-top:0.2rem;">'
+            'CARMIM — Cooperativa Agrícola de Reguengos de Monsaraz, C.R.L.</div>'
+            '<div style="font-size:0.95rem; color:#6B7280; margin-top:0.3rem;">'
+            'Indústria vitivinícola | Alentejo, Portugal</div>'
+            '</div>',
+            unsafe_allow_html=True,
+        )
+    st.markdown('---')
+
+# ============================================================
 # Header
 # ============================================================
 header_with_refresh(
     'Sistema Inteligente de Gestão de Cobertura de Stock',
-    'Indústria vitivinícola | Business Intelligence + Inteligência Artificial'
+    'Business Intelligence + Inteligência Artificial para antecipação de ruturas e otimização de compras'
 )
 
 # ============================================================

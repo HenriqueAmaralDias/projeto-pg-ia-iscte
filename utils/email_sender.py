@@ -188,7 +188,8 @@ Stocks abaixo dos limiares operacionais; intervenção recomendada para evitar r
 
 <tr><td style="background-color:{CREAM}; padding:14px 24px; text-align:center; font-size:11px; color:{GRAY}; border-top:1px solid #E5E7EB;">
 Sistema Inteligente de Gestão de Cobertura de Stock<br>
-Projeto Final | Pós-Graduação em Inteligência Artificial | ISCTE | Henrique Amaral Dias<br>
+PG em Tecnologias e IA Aplicadas aos Negócios | ISCTE Executive Education<br>
+Carlos Mota + Henrique Amaral Dias + Vítor Ribeiro<br>
 Email gerado automaticamente. Não responder.
 </td></tr>
 
@@ -241,7 +242,8 @@ def build_text(summary, pa_crit, comp_crit, top_compras, dashboard_url):
         '=' * 60,
         f'Dashboard: {dashboard_url}',
         '',
-        'Projeto Final | PG em IA | ISCTE | Henrique Amaral Dias',
+        'PG em Tecnologias e IA Aplicadas aos Negócios | ISCTE Executive Education',
+        'Carlos Mota + Henrique Amaral Dias + Vítor Ribeiro',
         'Email gerado automaticamente. Não responder.',
     ]
     return '\n'.join(lines)
