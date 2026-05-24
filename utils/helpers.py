@@ -100,21 +100,35 @@ def render_footer():
 
 
 def header_with_refresh(title, subtitle=None, show_home=True):
-    """Cabeçalho padrão: botão Home (esq) + título + botão Actualizar (dir).
+    """Cabeçalho padrão: título a toda a largura + toolbar por baixo.
 
-    O refresh limpa a cache de dados, força rerun, mostra toast e regista
-    timestamp visível na sidebar (modo demo durante apresentação).
+    Layout em 2 linhas para evitar conflito visual do sublinhado do <h1>
+    com os botões adjacentes:
+      Linha 1: # Título (h1 com underline dourado)
+               caption opcional
+      Linha 2: [🏠 Home]  ·  timestamp última actualização  ·  [🔄 Actualizar]
     """
-    col_home, col_title, col_refresh = st.columns([0.6, 4.4, 1.2])
+    # Linha 1 — título + subtítulo (toda a largura)
+    st.markdown(f'# {title}')
+    if subtitle:
+        st.caption(subtitle)
+
+    # Linha 2 — toolbar compacta
+    last_ts = st.session_state.get('last_refresh')
+    col_home, col_ts, col_refresh = st.columns([1, 3, 1.2])
 
     with col_home:
         if show_home:
             st.page_link('app.py', label='Home', icon='🏠')
 
-    with col_title:
-        st.markdown(f'# {title}')
-        if subtitle:
-            st.caption(subtitle)
+    with col_ts:
+        if last_ts:
+            st.markdown(
+                f'<div style="text-align:center; font-size:0.85rem; '
+                f'color:#059669; padding-top:0.4rem;">'
+                f'● Dados actualizados às <strong>{last_ts}</strong></div>',
+                unsafe_allow_html=True,
+            )
 
     with col_refresh:
         if st.button('🔄 Actualizar dados', use_container_width=True, type='primary'):
@@ -124,12 +138,4 @@ def header_with_refresh(title, subtitle=None, show_home=True):
             st.toast(f'Dados actualizados às {ts}', icon='✅')
             st.rerun()
 
-    # Banner "última actualização" sempre visível (canto sup. direito)
-    last_ts = st.session_state.get('last_refresh')
-    if last_ts:
-        st.markdown(
-            f'<div style="text-align:right; font-size:0.78rem; color:#059669; '
-            f'margin-top:-0.5rem; margin-bottom:0.5rem;">'
-            f'● Dados actualizados às <strong>{last_ts}</strong></div>',
-            unsafe_allow_html=True,
-        )
+    st.markdown('')  # pequeno espaçador antes do conteúdo
