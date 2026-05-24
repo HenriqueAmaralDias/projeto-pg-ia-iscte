@@ -58,9 +58,42 @@ CUSTOM_CSS = """
         font-weight: 700;
     }
 
-    /* Sidebar */
+    /* Sidebar — força texto escuro mesmo em dark mode (bg cream) */
     [data-testid="stSidebar"] {
-        background-color: #FAF4E1;
+        background-color: #FAF4E1 !important;
+    }
+    [data-testid="stSidebar"] *,
+    [data-testid="stSidebar"] a,
+    [data-testid="stSidebar"] label,
+    [data-testid="stSidebar"] span,
+    [data-testid="stSidebar"] p,
+    [data-testid="stSidebar"] h1,
+    [data-testid="stSidebar"] h2,
+    [data-testid="stSidebar"] h3,
+    [data-testid="stSidebar"] li,
+    [data-testid="stSidebar"] div[data-testid="stMarkdownContainer"] {
+        color: #1F2937 !important;
+    }
+    /* Links da navegação multi-page */
+    [data-testid="stSidebarNav"] a span {
+        color: #1F2937 !important;
+        font-weight: 500 !important;
+    }
+    [data-testid="stSidebarNav"] a:hover {
+        background-color: rgba(114, 47, 55, 0.1) !important;
+    }
+    /* Página activa */
+    [data-testid="stSidebarNav"] a[aria-current="page"] {
+        background-color: rgba(114, 47, 55, 0.15) !important;
+    }
+    [data-testid="stSidebarNav"] a[aria-current="page"] span {
+        color: #722F37 !important;
+        font-weight: 700 !important;
+    }
+    /* Inputs dentro da sidebar (selectbox, slider labels) */
+    [data-testid="stSidebar"] input,
+    [data-testid="stSidebar"] [data-baseweb="select"] {
+        color: #1F2937 !important;
     }
 
     /* Botões */

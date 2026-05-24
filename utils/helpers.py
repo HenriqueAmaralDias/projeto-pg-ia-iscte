@@ -99,14 +99,37 @@ def render_footer():
     )
 
 
-def header_with_refresh(title, subtitle=None):
-    """Cabeçalho padrão com botão de refresh."""
-    col1, col2 = st.columns([5, 1])
-    with col1:
+def header_with_refresh(title, subtitle=None, show_home=True):
+    """Cabeçalho padrão: botão Home (esq) + título + botão Actualizar (dir).
+
+    O refresh limpa a cache de dados, força rerun, mostra toast e regista
+    timestamp visível na sidebar (modo demo durante apresentação).
+    """
+    col_home, col_title, col_refresh = st.columns([0.6, 4.4, 1.2])
+
+    with col_home:
+        if show_home:
+            st.page_link('app.py', label='Home', icon='🏠')
+
+    with col_title:
         st.markdown(f'# {title}')
         if subtitle:
             st.caption(subtitle)
-    with col2:
-        if st.button('Actualizar dados', use_container_width=True):
+
+    with col_refresh:
+        if st.button('🔄 Actualizar dados', use_container_width=True, type='primary'):
             st.cache_data.clear()
+            ts = pd.Timestamp.now().strftime('%H:%M:%S')
+            st.session_state['last_refresh'] = ts
+            st.toast(f'Dados actualizados às {ts}', icon='✅')
             st.rerun()
+
+    # Banner "última actualização" sempre visível (canto sup. direito)
+    last_ts = st.session_state.get('last_refresh')
+    if last_ts:
+        st.markdown(
+            f'<div style="text-align:right; font-size:0.78rem; color:#059669; '
+            f'margin-top:-0.5rem; margin-bottom:0.5rem;">'
+            f'● Dados actualizados às <strong>{last_ts}</strong></div>',
+            unsafe_allow_html=True,
+        )

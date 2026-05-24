@@ -61,7 +61,8 @@ if logo_path.exists():
 # ============================================================
 header_with_refresh(
     'Sistema Inteligente de Gestão de Cobertura de Stock',
-    'Business Intelligence + Inteligência Artificial para antecipação de ruturas e otimização de compras'
+    'Business Intelligence + Inteligência Artificial para antecipação de ruturas e otimização de compras',
+    show_home=False,  # já estamos em casa
 )
 
 # ============================================================
@@ -132,7 +133,7 @@ with c3:
         'Necessidades de fabrico (MRP), prioridades de produção, '
         'explosão BOM, disponibilidade de componentes por PA.'
     )
-    st.page_link('pages/3_Producao.py', label='Abrir Produção →', icon='🏭')
+    st.page_link('pages/3_Produção.py', label='Abrir Produção →', icon='🏭')
 
 c4, c5, _ = st.columns(3)
 
