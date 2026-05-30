@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+title: "Sistema Inteligente de Gestão de Cobertura de Stock e Planeamento de Produção"
+message: "Se utilizar este software, por favor cite-o conforme abaixo."
+type: software
+authors:
+  - family-names: "Amaral Dias"
+    given-names: "Henrique"
+    email: "henrique.amaral.dias@redifogo.pt"
+    affiliation: "Heritage Horizon Investments e ISCTE Executive Education"
+  - family-names: "Mota"
+    given-names: "Carlos"
+    affiliation: "ISCTE Executive Education"
+  - family-names: "Ribeiro"
+    given-names: "Vítor"
+    affiliation: "ISCTE Executive Education"
+repository-code: "https://github.com/HenriqueAmaralDias/projeto-pg-ia-iscte"
+url: "https://projeto-stock-iscte.streamlit.app/"
+abstract: >-
+  Aplicação multi-página de Business Intelligence e Inteligência Artificial
+  para gestão de cobertura de stock e planeamento de produção na CARMIM
+  (Cooperativa Agrícola de Reguengos de Monsaraz). Implementa modelo de dados
+  consolidado em formato estrela com 13 sheets, cinco dashboards interativos
+  (Executivo, Produto Acabado, Produção, Componentes, Inteligência Artificial),
+  três modelos preditivos (XGBoost vencedor com F1 0.932 e ROC-AUC 0.994,
+  Random Forest, Isolation Forest) e cinco extensões opcionais (Prophet com
+  MAPE 10.7%, Simulador What-If, EOQ de Wilson para 264 componentes,
+  recomendação ML de compras para 129 componentes, alertas críticos por email
+  em formato RFC 5322).
+keywords:
+  - "Business Intelligence"
+  - "Inteligência Artificial"
+  - "Machine Learning"
+  - "XGBoost"
+  - "Prophet"
+  - "EOQ"
+  - "Streamlit"
+  - "Inventory Management"
+  - "Supply Chain"
+  - "Vitivinicultura"
+  - "ISCTE"
+  - "CARMIM"
+version: "1.0"
+date-released: "2026-05-23"
+license: "MIT"

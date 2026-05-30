@@ -4,8 +4,18 @@
 
 **Demo live:** https://projeto-stock-iscte.streamlit.app/
 
-Aplicação Streamlit multi-página | Projeto Final | PG em IA | ISCTE
-Autor: Henrique Amaral Dias
+Aplicação Streamlit multi-página, projeto final da Pós-Graduação em Tecnologias e Inteligência Artificial Aplicadas aos Negócios, ISCTE Executive Education. Caso de estudo: CARMIM (Cooperativa Agrícola de Reguengos de Monsaraz).
+
+---
+
+## Autoria e liderança
+
+| Papel | Nome |
+|---|---|
+| Líder do projeto e arquiteto da solução | **Henrique Amaral Dias** |
+| Equipa | Carlos Mota, Vítor Ribeiro |
+
+Desenvolvimento assistido por ferramentas de Inteligência Artificial (Claude Code), aplicadas de forma consistente com o objeto da Pós-Graduação. Toda a arquitetura, decisões metodológicas (em particular a estratégia A+B de modelação sobre dados pontuais), análise crítica dos resultados, validação operacional e defesa pública são da responsabilidade do líder do projeto. Ver `AUTHORS` e `CITATION.cff` para detalhes de citação académica.
 
 ---
 
